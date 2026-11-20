@@ -1,0 +1,16 @@
+RÉCITATION (effet « on se rapproche du récitateur »)
+
+Déposez ici deux fichiers MP3 (un par verset affiché sur le site) :
+  ali-jaber-9-18.mp3     (Coran 9:18)
+  ali-jaber-2-261.mp3    (Coran 2:261)
+
+Tant que ces fichiers sont absents, le bouton de récitation est automatiquement masqué.
+Pour changer de noms/chemins ou de récitateur : variable CFG.recitations et CFG.reciter dans index.html.
+
+Obtenir et découper l'audio :
+- Source trouvée : IslamHouse, « Recited Mushaf for Reciter Ali Abdullah Jaber » (sourates entières, MP3).
+  Vérifiez les conditions d'utilisation avant de publier l'audio sur le site.
+- Découpez le verset avec ffmpeg, en repérant les minutes en écoutant :
+  ffmpeg -ss 00:12:34 -to 00:12:52 -i sourate.mp3 -c copy ali-jaber-9-18.mp3
+- Hébergez les fichiers sur le même site (dossier public/audio) : l'effet de filtre
+  (son étouffé de loin, net de près) ne fonctionne que pour de l'audio du même domaine.

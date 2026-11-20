@@ -1,0 +1,13 @@
+name = "mosquee-bilal"
+main = "src/index.js"
+compatibility_date = "2025-10-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mosquee-bilal"
+database_id = "REMPLACER_APRES_CREATION"
